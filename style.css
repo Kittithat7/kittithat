@@ -1,0 +1,243 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        .fahkwang-extralight {
+  font-family: "Fahkwang", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.fahkwang-light {
+  font-family: "Fahkwang", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.fahkwang-regular {
+  font-family: "Fahkwang", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fahkwang-medium {
+  font-family: "Fahkwang", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.fahkwang-semibold {
+  font-family: "Fahkwang", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.fahkwang-bold {
+  font-family: "Fahkwang", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.fahkwang-extralight-italic {
+  font-family: "Fahkwang", serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.fahkwang-light-italic {
+  font-family: "Fahkwang", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.fahkwang-regular-italic {
+  font-family: "Fahkwang", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.fahkwang-medium-italic {
+  font-family: "Fahkwang", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.fahkwang-semibold-italic {
+  font-family: "Fahkwang", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.fahkwang-bold-italic {
+  font-family: "Fahkwang", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+
+        body {
+            font-family: "Fahkwang", serif;
+            margin: 0;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-image: url(2.png); /* กำหนดรูปภาพใน background */
+            background-size: cover; /* ให้รูปภาพขยายเต็มขนาด */
+            background-position: center; /* จัดตำแหน่งรูปภาพให้ตรงกลาง */
+            color: rgb(3, 3, 3);
+            text-align: center;
+            padding: 140px 20px; /* ปรับขนาด padding ให้เหมาะสม */
+            width: 100%;
+        }
+        header h1 {
+            position: absolute;
+            top: 35%; /* ย้ายข้อความไปที่ 30% ของความสูงของ header */
+            left: 50%;
+            transform: translateX(-50%); /* ให้อยู่ตรงกลางแนวนอน */
+            font-size: 2rem; /* ปรับขนาดฟอนต์ */
+            margin: 0;
+            
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 850px;
+            width: 100%;
+        }
+        .intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 900px;
+            padding: 20px;
+            margin-top: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            background-color: #ffffff;
+            border-radius: center;
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+
+        h2 {
+            background-color: #e0f7fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #00796b;
+        }
+
+        p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        code {
+            display: block;
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 1rem;
+            margin-top: 10px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+
+        .example {
+            background-color: #fff3e0;
+            padding: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #ff7043;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .try-button {
+            background-color: #ff7043;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .try-button:hover {
+            background-color: #ff5722;
+        }
+
+        @media screen and (max-width: 768px) {
+          section {
+            width: 90%; /* ลดความกว้างเพื่อให้เหมาะสมกับหน้าจอเล็ก */
+            margin: 0px auto; /* จัดให้ section อยู่กลาง */
+            padding: 15px; /* ปรับ padding เพื่อให้ดูไม่แออัดเกินไป */
+        }
+    
+        main {
+            width: 100%;
+            padding: 10px; /* ลด padding ใน main */
+            text-align: center; /* ให้ข้อความอยู่ตรงกลาง */
+        }
+    
+        .intro {
+            width: 97%; /* ลดความกว้างของ intro */
+            padding: 15px;
+            margin:  auto; /* จัดให้อยู่กลางหน้าจอ */
+        }
+    
+        header h1 {
+            font-size: 1.5rem; /* ปรับขนาดฟอนต์ให้เล็กลงเมื่อหน้าจอเล็ก */
+        }
+        }
+
+        .SSS {
+            background-color: #008CBA; /* สีพื้นหลัง */
+            color: white; /* สีข้อความ */
+            border: none; /* ไม่มีกรอบ */
+            padding: 15px 32px; /* ระยะห่างภายในปุ่ม */
+            text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+            text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+            display: inline-block; /* ให้ปุ่มแสดงในบรรทัดเดียว */
+            font-size: 16px; /* ขนาดตัวอักษร */
+            border-radius: 12px; /* ขอบปุ่มโค้ง */
+            cursor: pointer; /* แสดงมือเมื่อชี้ */
+            transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงเมื่อมีการโต้ตอบ */
+        }
+
+        /* เมื่อ hover หรือเมื่อเอาเมาส์ไปชี้ที่ปุ่ม */
+        .SSS:hover {
+            background-color: #005f6b; /* สีพื้นหลังเข้มขึ้น */
+            transform: translateY(-3px); /* ปรับให้ปุ่มเลื่อนขึ้นเล็กน้อย */
+        }
+
+        /* เมื่อมีการกดปุ่ม */
+        .SSS:active {
+            background-color: #004f58; /* สีพื้นหลังเข้มมากขึ้น */
+            transform: translateY(2px); /* ปรับให้ปุ่มเลื่อนลงเล็กน้อย */
+        }
