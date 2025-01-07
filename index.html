@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="เรียนรู้ประเภทข้อมูลในภาษา Python เช่น str, int, float, dict, list, tuple, boolean และอื่นๆ พร้อมตัวอย่างโค้ด">
+    <meta name="keywords" content="Python, Data Types, str, int, float, dict, list, boolean, tuple, set, SEO">
+    <meta name="author" content="Your Name">
+    <title>Data Types ใน Python</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+        .fahkwang-extralight {
+  font-family: "Fahkwang", serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.fahkwang-light {
+  font-family: "Fahkwang", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.fahkwang-regular {
+  font-family: "Fahkwang", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.fahkwang-medium {
+  font-family: "Fahkwang", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.fahkwang-semibold {
+  font-family: "Fahkwang", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.fahkwang-bold {
+  font-family: "Fahkwang", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.fahkwang-extralight-italic {
+  font-family: "Fahkwang", serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.fahkwang-light-italic {
+  font-family: "Fahkwang", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.fahkwang-regular-italic {
+  font-family: "Fahkwang", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.fahkwang-medium-italic {
+  font-family: "Fahkwang", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.fahkwang-semibold-italic {
+  font-family: "Fahkwang", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.fahkwang-bold-italic {
+  font-family: "Fahkwang", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+
+
+        body {
+            font-family: "Fahkwang", serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-image: url(2.png); /* กำหนดรูปภาพใน background */
+            background-size: cover; /* ให้รูปภาพขยายเต็มขนาด */
+            background-position: center; /* จัดตำแหน่งรูปภาพให้ตรงกลาง */
+            color: rgb(3, 3, 3);
+            text-align: center;
+            padding: 140px 20px; /* ปรับขนาด padding ให้เหมาะสม */
+            width: 100%;
+        }
+        header h1 {
+            position: absolute;
+            top: 35%; /* ย้ายข้อความไปที่ 30% ของความสูงของ header */
+            left: 50%;
+            transform: translateX(-50%); /* ให้อยู่ตรงกลางแนวนอน */
+            font-size: 2rem; /* ปรับขนาดฟอนต์ */
+            margin: 0;
+            
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 900px;
+            width: 100%;
+        }
+        .intro {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #555;
+            max-width: 900px;
+            padding: 20px;
+            margin-top: 30px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            background-color: #e0f7fa;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #00796b;
+        }
+
+        p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        code {
+            display: block;
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 1rem;
+            margin-top: 10px;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+
+        .example {
+            background-color: #fff3e0;
+            padding: 10px;
+            margin: 20px 0;
+            border-left: 5px solid #ff7043;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .try-button {
+            background-color: #ff7043;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .try-button:hover {
+            background-color: #ff5722;
+        }
+
+        @media (max-width: 768px) {
+            section {
+                width: 100%;
+            }
+        }
+
+        .SSS {
+            background-color: #008CBA; /* สีพื้นหลัง */
+            color: white; /* สีข้อความ */
+            border: none; /* ไม่มีกรอบ */
+            padding: 15px 32px; /* ระยะห่างภายในปุ่ม */
+            text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+            text-decoration: none; /* ไม่มีขีดเส้นใต้ */
+            display: inline-block; /* ให้ปุ่มแสดงในบรรทัดเดียว */
+            font-size: 16px; /* ขนาดตัวอักษร */
+            border-radius: 12px; /* ขอบปุ่มโค้ง */
+            cursor: pointer; /* แสดงมือเมื่อชี้ */
+            transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงเมื่อมีการโต้ตอบ */
+        }
+
+        /* เมื่อ hover หรือเมื่อเอาเมาส์ไปชี้ที่ปุ่ม */
+        .SSS:hover {
+            background-color: #005f6b; /* สีพื้นหลังเข้มขึ้น */
+            transform: translateY(-3px); /* ปรับให้ปุ่มเลื่อนขึ้นเล็กน้อย */
+        }
+
+        /* เมื่อมีการกดปุ่ม */
+        .SSS:active {
+            background-color: #004f58; /* สีพื้นหลังเข้มมากขึ้น */
+            transform: translateY(2px); /* ปรับให้ปุ่มเลื่อนลงเล็กน้อย */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Data Types</h1>
+    </header>
+    <div class="intro">
+        <p><b>Python คืออะไร</b> <br>
+            Python เป็นภาษาโปรแกรมที่มีความนิยมสูงและใช้กันอย่างแพร่หลาย โดยมันได้รับการออกแบบให้เข้าใจง่าย และมีโครงสร้างที่ชัดเจน อ่านง่าย เหมาะสำหรับผู้เริ่มต้นในการเรียนรู้การเขียนโปรแกรมและยังสามารถใช้ในการพัฒนาโปรแกรมที่ซับซ้อนได้ <br>
+        เราจะมาเรียนรู้ประเภทข้อมูลหรือเรียกกันว่า <b>Data type</b>
+        </p>
+    </div>
+    <main>
+        <!-- String (str) -->
+        <section>
+            <h2>ประเภทข้อมูล str (String)</h2>
+            <p>ประเภทข้อมูล str  คือประเภทข้อมูลที่ใช้สำหรับเก็บข้อความ ซึ่งประกอบด้วยตัวอักษรหรือสัญลักษณ์ใดๆ ที่ถูกจัดเก็บไว้ในรูปแบบของลำดับของตัวอักษร โดยข้อความใน str จะอยู่ภายใน <b>('.........') </b>หรือ <b>(".........")</b><br>
+            เช่น <b>"Hello Python"</b>
+            </p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+                text = "สวัสดี, Python!"<br>
+                print(text)  # Output: สวัสดี, Python!<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ใช้คัดลอกข้อความ -->
+            <button class="try-button" onclick="copyCode(this)">คัดลอกโค้ดนี้</button>
+        </section>
+        </section>
+
+        <!-- Integer (int) -->
+        <section>
+            <h2>ประเภทข้อมูล int (Integer)</h2>
+            <p>ประเภทข้อมูล <strong>int</strong> ใช้เก็บตัวเลขจำนวนเต็ม เช่น 5, -7 หรือ 100</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+                a = 5<br>
+                b = 6<br>
+                print(a + b)  # Output: 11<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ให้ไปที่ CodePen พร้อมกับโค้ด -->
+            <a href="https://codepen.io/pen/?editors=1000" target="_blank">
+                <button class="try-button">ลองแก้ไขโค้ดนี้ใน CodePen</button>
+            </a>
+        </section>
+
+        <!-- Float (Decimal Numbers) -->
+        <section>
+            <h2>ประเภทข้อมูล float (Decimal Numbers)</h2>
+            <p>ประเภทข้อมูล <strong>float</strong> ใช้เก็บตัวเลขที่มีจุดทศนิยม เช่น 3.14 หรือ 7.5</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+                a = 11.5<br>
+                b = 6.3<br>
+                print(a + b)  # Output: 17.8<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ให้ไปที่ CodePen พร้อมกับโค้ด -->
+            <a href="https://codepen.io/pen/?editors=1000" target="_blank">
+                <button class="try-button">ลองแก้ไขโค้ดนี้ใน CodePen</button>
+            </a>
+        </section>
+
+        <!-- Complex (Complex Numbers) -->
+        <section>
+            <h2>ประเภทข้อมูล complex (Complex Numbers)</h2>
+            <p>ประเภทข้อมูล <strong>complex</strong> ใช้เก็บจำนวนเชิงซ้อนที่มีส่วนจริงและส่วนจินตภาพ</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+                x = 3 + 4j<br>
+                print(type(x))  # <class 'complex'> <br>
+                print("Real part:", x.real)  # Output: 3.0<br>
+                print("Imaginary part:", x.imag)  # Output: 4.0<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ให้ไปที่ CodePen พร้อมกับโค้ด -->
+            <a href="https://codepen.io/pen/?editors=1000" target="_blank">
+                <button class="try-button">ลองแก้ไขโค้ดนี้ใน CodePen</button>
+            </a>
+        </section>
+
+        <!-- List (list) -->
+        <section>
+            <h2>ประเภทข้อมูล list (List)</h2>
+            <p>ประเภทข้อมูล <strong>list</strong> คือชุดของข้อมูลที่สามารถเก็บหลายๆ ค่าได้ภายในตัวมันเอง ซึ่งสามารถมีทั้งตัวเลขและข้อความได้</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+                fruits = ["apple", "banana", "cherry"]<br>
+                fruits.append("orange")<br>
+                print(fruits)  # Output: ['apple', 'banana', 'cherry', 'orange']<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ให้ไปที่ CodePen พร้อมกับโค้ด -->
+            <a href="https://codepen.io/pen/?editors=1000" target="_blank">
+                <button class="try-button">ลองแก้ไขโค้ดนี้ใน CodePen</button>
+            </a>
+        </section>
+
+        <!-- Tuple (tuple) -->
+        <section>
+            <h2>ประเภทข้อมูล tuple (Tuple)</h2>
+            <p>ประเภทข้อมูล <strong>tuple</strong> คล้ายกับ <strong>list</strong> แต่ไม่สามารถแก้ไขค่าใน tuple ได้หลังจากสร้างขึ้น</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+                fruits = ("apple", "banana", "cherry")<br>
+                print(fruits[0])  # Output: apple<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ให้ไปที่ CodePen พร้อมกับโค้ด -->
+            <a href="https://codepen.io/pen/?editors=1000" target="_blank">
+                <button class="try-button">ลองแก้ไขโค้ดนี้ใน CodePen</button>
+            </a>
+        </section>
+
+        <!-- Set (set) -->
+        <section>
+            <h2>ประเภทข้อมูล set (Set)</h2>
+            <p>ประเภทข้อมูล <strong>set</strong> ใช้เก็บข้อมูลที่ไม่ซ้ำกันและไม่สนใจลำดับของข้อมูล</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+                fruits = {"apple", "banana", "cherry"}<br>
+                fruits.add("orange")<br>
+                print(fruits)  # Output: {'apple', 'banana', 'cherry', 'orange'}<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ให้ไปที่ CodePen พร้อมกับโค้ด -->
+            <a href="https://codepen.io/pen/?editors=1000" target="_blank">
+                <button class="try-button">ลองแก้ไขโค้ดนี้ใน CodePen</button>
+            </a>
+        </section>
+
+        <!-- Dictionary (dict) -->
+        <section>
+            <h2>ประเภทข้อมูล dict (Dictionary)</h2>
+            <p>ประเภทข้อมูล <strong>dict</strong> ใช้เก็บข้อมูลที่เป็นคู่ของคีย์และค่า เช่น {"name": "John", "age": 30}</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+                person = {"name": "John", "age": 30}<br>
+                print(person["name"])  # Output: John<br>
+                print(person["age"])  # Output: 30<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ให้ไปที่ CodePen พร้อมกับโค้ด -->
+            <a href="https://codepen.io/pen/?editors=1000" target="_blank">
+                <button class="try-button">ลองแก้ไขโค้ดนี้ใน CodePen</button>
+            </a>
+        </section>
+
+        <!-- Boolean (boolean) -->
+        <section>
+            <h2>ประเภทข้อมูล boolean (Boolean)</h2>
+            <p>ประเภทข้อมูล <strong>boolean</strong> ใช้เก็บค่าที่เป็น <strong>True</strong> หรือ <strong>False</strong> เท่านั้น</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+                x = 7<br>
+                y = 10<br>
+                result = x < y  # True<br>
+                print(result)  # Output: True<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ให้ไปที่ CodePen พร้อมกับโค้ด -->
+            <a href="https://codepen.io/pen/?editors=1000" target="_blank">
+                <button class="try-button">ลองแก้ไขโค้ดนี้ใน CodePen</button>
+            </a>
+        </section>
+        <button class="SSS" >เรียนรู้เพิ่มเติม</button> <br>
+         <button class="SSS">แบบฝึกหัด</button>
+       
+    </main>
+    <script>
+        function copyCode(button) {
+            // สร้างข้อความที่ต้องการจะคัดลอก
+            const codeBlock = button.previousElementSibling.querySelector('code');
+            const codeText = codeBlock.textContent || codeBlock.innerText;
+
+            // สร้าง text area ชั่วคราวเพื่อคัดลอกข้อความ
+            const textArea = document.createElement('textarea');
+            textArea.value = codeText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+
+            // แจ้งให้ผู้ใช้ทราบว่าได้คัดลอกแล้ว
+            alert('คัดลอกโค้ดแล้ว!');
+        }
+    </script>
+  
+
+</body>
+</html>
