@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box; /* ให้ทุกๆ element ใช้ box-sizing แบบ border-box */
+}
+
+body {
+    font-family: "Fahkwang", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1ea0e1;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;  /* เปลี่ยนจาก center เป็น flex-start */
+    min-height: 100vh;
+}
+
+header {
+    background-image: url(2.png);
+    background-size: cover; /* ให้ภาพขยายเต็มพื้นที่ */
+    background-position: center; /* จัดตำแหน่งภาพให้อยู่กลาง */
+    color: rgb(3, 3, 3);
+    text-align: center;
+    padding: 20px;
+    width: 60%; /* ขยายความกว้างเต็มหน้าจอ */
+    height: 270px; /* กำหนดความสูงของ header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 40px;  /* กำหนดให้ไม่มีระยะห่างด้านบน */
+    margin-bottom: 20px; /* ให้มีระยะห่างด้านล่าง */
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    margin: 0; /* ลบระยะห่างทั้งหมด */
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: rgb(8, 8, 8);
+    z-index: 10;
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    margin-top: 312px; /* เพิ่มระยะห่างด้านบนเพื่อขยับลง */
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        background-size: cover; /* ให้ภาพยังคงครอบคลุมพื้นที่ */
+        background-position: center;
+        width: 100%; /* ใช้ความกว้างเต็มที่ */
+        height: 50vh; /* ใช้ความสูงเป็น 50% ของหน้าจอสำหรับหน้าจอเล็ก */
+    }
+
+    header h1 {
+        display: none; /* ซ่อนข้อความใน header สำหรับหน้าจอเล็ก */
+    }
+}
+
+main {
+    padding-top: 20px; /* ให้ระยะห่างจากด้านบนของ main */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;  /* ให้แนวตั้งเริ่มจากบนสุด */
+    width: 100%;
+    margin: 20px auto;
+    max-width: 850px; /* ตั้งค่าสูงสุดเพื่อให้กรอบของ main มีขนาดพอดี */
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 30px auto;  /* เพิ่มระยะห่างด้านบนและด้านล่างของ section */
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #555;
+    width: 100%;  /* ใช้ความกว้างทั้งหมด */
+    padding: 20px;  /* ใช้ padding เท่ากับ body */
+    margin: 20px auto; /* จัด margin ให้เท่ากับ body */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;  /* คำนวณกรอบรวมกับขนาด */
+    max-width: 850px;  /* กำหนด max-width เท่ากับ main เพื่อให้กรอบไม่เกิน */
+}
+
+h2 {
+    background-color: #e0f7fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #00796b;
+}
+
+p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+code {
+    display: block;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 1rem;
+    margin-top: 10px;
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.try-button {
+    background-color: #ff7043;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Sidebar (เปลี่ยนให้เป็นเมนูแนวนอนที่ด้านบน) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* ความสูงของเมนู */
+    background-color: #333;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* จัดให้เมนูอยู่กลาง */
+    align-items: center; /* จัดให้เมนูอยู่ตรงกลางแนวนอน */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+/* ปุ่ม Home */
+.home-button {
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #36363a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.home-button:hover {
+    background-color: #2666aa;
+}
+
+/* ลิงก์ในเมนู */
+.sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    text-align: center; /* ทำให้ข้อความอยู่ตรงกลาง */
+    display: inline-block; /* แสดงลิงก์เป็น inline-block */
+    margin: 0 15px; /* ระยะห่างระหว่างลิงก์ */
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #575757;
+}
+button.SS {
+    background-color: #2d312d; /* สีพื้นหลังปุ่ม */
+    color: white; /* สีของข้อความบนปุ่ม */
+    padding: 12px 25px; /* ระยะห่างภายในปุ่ม */
+    font-size: 1rem; /* ขนาดตัวอักษร */
+    border: none; /* ไม่ให้มีขอบ */
+    border-radius: 30px; /* ขอบมนเพื่อให้ปุ่มมีมุมโค้ง */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ปุ่มมีมิติ */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เมื่อวางเมาส์บนปุ่ม */
+    transition: all 0.3s ease; /* เพิ่มการเปลี่ยนแปลงที่สวยงาม */
+    text-align: center; /* จัดข้อความให้ตรงกลาง */
+    font-weight: bold; /* ทำให้ตัวอักษรหนา */
+    letter-spacing: 1px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+/* เมื่อวางเมาส์ (hover) */
+button.SS:hover {
+    background-color: #942830; /* เปลี่ยนสีพื้นหลังเมื่อเมาส์วางบนปุ่ม */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* เพิ่มเงาที่เข้มขึ้น */
+    transform: translateY(-3px); /* ทำให้ปุ่มยกขึ้นเมื่อมีการ hover */
+}
+
+/* เมื่อปุ่มถูกคลิก (active) */
+button.SS:active {
+    background-color: #f51a2c; /* สีพื้นหลังเมื่อคลิก */
+    transform: translateY(1px); /* ลดความสูงเมื่อกดปุ่ม */
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        display: none; /* ซ่อน sidebar บนอุปกรณ์ที่มีหน้าจอเล็ก */
+    }
+
+    main {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .intro {
+        padding: 15px;
+        margin: 15px 0;
+        max-width: 850px;  /* ใช้ max-width เท่ากับ main */
+    }
+
+    section {
+        width: 90%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}

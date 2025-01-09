@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="เรียนรู้ประเภทข้อมูลในภาษา Python เช่น str, int, float, dict, list, tuple, boolean และอื่นๆ พร้อมตัวอย่างโค้ด">
+    <meta name="keywords" content="Python, Data Types, str, int, float, dict, list, boolean, tuple, set, SEO">
+    <meta name="author" content="Your Name">
+    <title>Data Types ใน Python</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Data Type in Python</h1>
+    </header>
+    <div class="intro">
+        <p>
+            <h1><b>Python คืออะไร</b> <br></h1>
+            Python เป็นภาษาโปรแกรมที่มีความนิยมสูงและใช้กันอย่างแพร่หลาย โดยมันได้รับการออกแบบให้เข้าใจง่าย และมีโครงสร้างที่ชัดเจน อ่านง่าย เหมาะสำหรับผู้เริ่มต้นในการเรียนรู้การเขียนโปรแกรมและยังสามารถใช้ในการพัฒนาโปรแกรมที่ซับซ้อนได้ <br>
+            เราจะมาเรียนรู้ประเภทข้อมูลหรือเรียกกันว่า <b>Data type</b> แบบง่ายๆกัน เพียงแค่ 
+            <a href="https://www.programiz.com/python-programming/online-compiler/" target="_blank"><b>กดที่นี่</b></a> เพื่อ Compiler code บนเบราว์เซอร์
+        </p>
+    </div>
+    <main>
+        <!-- String (str) -->
+        <section id="section1">
+            <h2>ประเภทข้อมูล str (String)</h2>
+            <p>ประเภทข้อมูล str  คือประเภทข้อมูลที่ใช้สำหรับเก็บข้อความ ซึ่งประกอบด้วยตัวอักษรหรือสัญลักษณ์ใดๆ ที่ถูกจัดเก็บไว้ในรูปแบบของลำดับของตัวอักษร โดยข้อความใน str จะอยู่ภายใน <b>('.........') </b>หรือ <b>(".........")</b><br>
+            เช่น <b>"Hello Python"</b>
+            </p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+text = "สวัสดี, Python!"<br>
+print(text)  # Output: สวัสดี, Python!<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ใช้คัดลอกข้อความ -->
+            <button class="try-button" onclick="copyCode(this)">คัดลอกโค้ดนี้</button>
+        </section>
+        
+
+        <!-- Integer (int) -->
+        <section id="section2">
+            <h2>ประเภทข้อมูล int (Integer)</h2>
+            <p>ประเภทข้อมูล <strong>int</strong> ใช้เก็บตัวเลขจำนวนเต็ม เช่น 5, -7 หรือ 100</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+a = 5<br>
+b = 6<br>
+print(a + b)  # Output: 11<br>
+                </code>
+            </div>
+            
+            <!-- ปุ่มที่ใช้คัดลอกข้อความ -->
+            <button class="try-button" onclick="copyCode(this)">คัดลอกโค้ดนี้</button>
+            </a>
+        </section>
+
+        <!-- Float (Decimal Numbers) -->
+        <section id="section3">
+            <h2>ประเภทข้อมูล float (Decimal Numbers)</h2>
+            <p>ประเภทข้อมูล <strong>float</strong> ใช้เก็บตัวเลขที่มีจุดทศนิยม เช่น 3.14 หรือ 7.5</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+a = 11.5<br>
+b = 6.3<br>
+print(a + b)  # Output: 17.8<br>
+                </code>
+            </div>
+            <button class="try-button" onclick="copyCode(this)">คัดลอกโค้ดนี้</button>
+            </a>
+        </section>
+
+        <!-- Complex (Complex Numbers) -->
+        <section id="section4">
+            <h2>ประเภทข้อมูล complex (Complex Numbers)</h2>
+            <p>ประเภทข้อมูล <strong>complex</strong> ใช้เก็บจำนวนเชิงซ้อนที่มีส่วนจริงและส่วนจินตภาพจะมี J หรือ j ต่อท้ายค่านั้น</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+x = 3 + 4j<br>
+print("Real part:", x.real)  # Output: 3.0<br>
+print("Imaginary part:", x.imag)  # Output: 4.0<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ให้ไปที่ CodePen พร้อมกับโค้ด -->
+            <button class="try-button" onclick="copyCode(this)">คัดลอกโค้ดนี้</button>
+            </a>
+        </section>
+
+        <!-- List (list) -->
+        <section id="section5">
+            <h2>ประเภทข้อมูล list (List)</h2>
+            <p>ประเภทข้อมูล <strong>list</strong> คือชุดของข้อมูลที่สามารถเก็บหลายๆ ค่าได้ภายในตัวมันเอง ซึ่งสามารถมีทั้งตัวเลขและข้อความได้</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+fruits = ["apple", "banana", "cherry"]<br>
+fruits.append("orange")<br>
+print(fruits)  # Output: ['apple', 'banana', 'cherry', 'orange']<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ให้ไปที่ CodePen พร้อมกับโค้ด -->
+            <button class="try-button" onclick="copyCode(this)">คัดลอกโค้ดนี้</button>
+            </a>
+        </section>
+
+        <!-- Tuple (tuple) -->
+        <section id="section6">
+            <h2>ประเภทข้อมูล tuple (Tuple)</h2>
+            <p>ประเภทข้อมูล <strong>tuple</strong> คล้ายกับ <strong>list</strong> แต่ไม่สามารถแก้ไขค่าใน tuple ได้หลังจากสร้างขึ้น</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+fruits = ("apple", "banana", "cherry")<br>
+print(fruits[0])  # Output: apple<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ให้ไปที่ CodePen พร้อมกับโค้ด -->
+            <button class="try-button" onclick="copyCode(this)">คัดลอกโค้ดนี้</button>
+        </section>
+
+        <!-- Set (set) -->
+        <section id="section7">
+            <h2>ประเภทข้อมูล set (Set)</h2>
+            <p>ประเภทข้อมูล <strong>set</strong> ใช้เก็บข้อมูลที่ไม่ซ้ำกันและไม่สนใจลำดับของข้อมูล</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+fruits = {"apple", "banana", "cherry"}<br>
+fruits.add("orange")<br>
+print(fruits)  # Output: {'apple', 'banana', 'cherry', 'orange'}<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ให้ไปที่ CodePen พร้อมกับโค้ด -->
+            <button class="try-button" onclick="copyCode(this)">คัดลอกโค้ดนี้</button>
+        </section>
+
+        <!-- Dictionary (dict) -->
+        <section id="section8">
+            <h2>ประเภทข้อมูล dict (Dictionary)</h2>
+            <p>ประเภทข้อมูล <strong>dict</strong> ใช้เก็บข้อมูลที่เป็นคู่ของคีย์และค่า เช่น {"name": "John", "age": 30}</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+person = {"name": "John", "age": 30}<br>
+print(person["name"])  # Output: John<br>
+print(person["age"])  # Output: 30<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ให้ไปที่ CodePen พร้อมกับโค้ด -->
+            <button class="try-button" onclick="copyCode(this)">คัดลอกโค้ดนี้</button>
+        </section>
+
+        <!-- Boolean (boolean) -->
+        <section id="section9">
+            <h2>ประเภทข้อมูล boolean (Boolean)</h2>
+            <p>ประเภทข้อมูล <strong>boolean</strong> ใช้เก็บค่าที่เป็น <strong>True</strong> หรือ <strong>False</strong> เท่านั้น</p>
+            <div class="example">
+                <strong>ตัวอย่าง:</strong>
+                <code>
+x = 7<br>
+y = 10<br>
+result = x < y  # True<br>
+print(result)  # Output: True<br>
+                </code>
+            </div>
+            <!-- ปุ่มที่ให้ไปที่ CodePen พร้อมกับโค้ด -->
+            <button class="try-button" onclick="copyCode(this)">คัดลอกโค้ดนี้</button>
+        </section>
+        <button class="SS" onclick="window.location.href='https://www.w3schools.com/python/python_datatypes.asp'">เรียนรู้เพิ่มเติม</button> <br>
+        <button class="SS" onclick="window.location.href='https://www.w3schools.com/python/exercise.asp?x=xrcise_datatypes1'">แบบฝึกหัด</button> <br>
+        <div class="sidebar">
+            <button class="home-button" onclick="window.location.href='index.html'">Home</button>
+            <a href="#section1">String</a>
+            <a href="#section2">Integer</a>
+            <a href="#section3">Float</a>
+            <a href="#section4">Complex</a>
+            <a href="#section5">List</a>
+            <a href="#section6">Tuple</a>
+            <a href="#section7">Set</a>
+            <a href="#section8">Dictionary</a>
+            <a href="#section9">Boolean</a>
+        </div>
+
+
+    </main>
+    <script>
+        function copyCode(button) {
+            // สร้างข้อความที่ต้องการจะคัดลอก
+            const codeBlock = button.previousElementSibling.querySelector('code');
+            const codeText = codeBlock.textContent || codeBlock.innerText;
+
+            // สร้าง text area ชั่วคราวเพื่อคัดลอกข้อความ
+            const textArea = document.createElement('textarea');
+            textArea.value = codeText;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+
+            // แจ้งให้ผู้ใช้ทราบว่าได้คัดลอกแล้ว
+            alert('คัดลอกโค้ดแล้ว!');
+        }
+    </script>
+  
+
+</body>
+</html>
