@@ -243,3 +243,10 @@ button.SS:active {
         font-size: 1.2rem;
     }
 }
+.video-container iframe {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 16/9; /* ให้วีดีโอมีอัตราส่วน 16:9 */
+}
+
